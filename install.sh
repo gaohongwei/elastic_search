@@ -9,6 +9,7 @@ apt-get install software-properties-common
 add-apt-repository ppa:webupd8team/java
 apt-get update
 apt-get install oracle-java8-installer
+java -version
 
 ### Check http://www.elasticsearch.org/download/ for latest version of ElasticSearch and replace wget link below
 
