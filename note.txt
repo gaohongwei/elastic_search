@@ -26,3 +26,12 @@ elasticsearch-head是一个elasticsearch的集群管理工具，
 bigdesk是elasticsearch的一个集群监控工具，
 可以通过它来查看es集群的各种状态，
 如：cpu、内存使用情况，索引数据、搜索情况，http连接数等。
+
+##################### Shield  #####################
+Installing Shield on Offline Machines
+https://download.elastic.co/elasticsearch/shield/shield-1.3.2.zip
+bin/plugin -i shield -u file://PATH_TO_ZIP_FILE
+
+./bin/shield/esusers useradd ky -p abc123Abc
+./bin/shield/esusers list
+./bin/shield/esusers passwd ky -p abc123AbC
