@@ -5,10 +5,10 @@ cd ~
 #sudo apt-get install openjdk-8-jre-headless -y
 
 ###Or if you want to install Oracle JDK, which seems to have slightly better performance
-apt-get install software-properties-common
-add-apt-repository ppa:webupd8team/java
+apt-get install software-properties-common -y
+add-apt-repository ppa:webupd8team/java -y
 apt-get update
-apt-get install oracle-java8-installer
+apt-get install oracle-java8-installer -y
 java -version
 
 ### Check http://www.elasticsearch.org/download/ for latest version of ElasticSearch and replace wget link below
