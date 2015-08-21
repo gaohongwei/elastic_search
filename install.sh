@@ -11,6 +11,9 @@ apt-get update
 apt-get install oracle-java8-installer -y
 java -version
 
+### Download java
+wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie"  \
+http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.tar.gz
 ### Check http://www.elasticsearch.org/download/ for latest version of ElasticSearch and replace wget link below
 
 wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.4.2.deb
