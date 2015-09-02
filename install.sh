@@ -4,6 +4,7 @@ cd ~
 #sudo apt-get update
 #sudo apt-get install openjdk-8-jre-headless -y
 
+apt-get download
 ###Or if you want to install Oracle JDK, which seems to have slightly better performance
 apt-get install software-properties-common -y
 add-apt-repository ppa:webupd8team/java -y
