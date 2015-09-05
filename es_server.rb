@@ -9,3 +9,4 @@ end
 Tire.configure { url "http://myremoteserver.com:9200" }
 
 # Can I sepcify multiple url?
+Tire.configuration { url 'http://es1.example.com', 'http://es1.example.com' } 
