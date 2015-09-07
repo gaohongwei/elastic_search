@@ -2,4 +2,6 @@
 List alll index
 http://localhost:9200/_cat/indices?v
 
-http://172.16.16.137:9200/hsms/_search?pretty=1
+http://172.16.16.136:9200/hsms/_search?pretty=1
+
+http://172.16.16.136:9200/_nodes/process?pretty
