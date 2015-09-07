@@ -1,2 +1,4 @@
 
 http://172.16.16.136:9200/_nodes/process?pretty
+
+view  /etc/elasticsearch/elasticsearch.yml
