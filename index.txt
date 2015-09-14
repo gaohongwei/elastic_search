@@ -5,6 +5,15 @@ http://172.16.16.136:9200/_cat/indices?v
 http://172.16.16.136:9200/hsms?pretty
 http://172.16.16.136:9200/_nodes/process?pretty
 
-
-
 curl -XDELETE '172.16.16.136:9200/hsms?pretty'
+
+Count
+http://172.16.16.136:9200/hsms/hsm/_count
+http://172.16.16.136:9200/hsms/hsm/_count?q=id:1
+$ curl -XGET 'http://localhost:9200/twitter/tweet/_count?q=user:kimchy'
+$ curl -XGET 'http://localhost:9200/twitter/tweet/_count' -d '
+{
+    "query" : {
+        "term" : { "user" : "kimchy" }
+    }
+}'
