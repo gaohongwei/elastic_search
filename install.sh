@@ -101,3 +101,7 @@ curl http://localhost:9200
 #  },
 #  "tagline" : "You Know, for Search"
 # }
+
+Locate installation directory ( Look for Settings -> Path -> Home for value )
+$ curl "localhost:9200/_nodes/settings?pretty=true"
+http://127.0.0.1:9200/_nodes/settings?pretty=true
