@@ -15,3 +15,15 @@
     [result['key'], result['doc_count']]
   end
   Hash[pairs] # key=>doc_count
+
+  def es_count_by(queries, field)
+    queries = queries.merge!(aggs: { results: { terms: { field: field, size: 0 } } })
+    __elasticsearch__.client.search(index: index_name, body: queries, search_type: :count)
+      .try(:[], 'aggregations')
+      .try(:[], 'results')
+      .try(:[], 'buckets') || []
+  end
+  def es_count(queries)
+    return 0 unless queries
+    __elasticsearch__.client.count(index: index_name, body: queries).try(:[], 'count') || 0
+  end   
