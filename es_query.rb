@@ -14,4 +14,4 @@
   pairs=buckets.map do |result|
     [result['key'], result['doc_count']]
   end
-  Hash[pairs]
+  Hash[pairs] # key=>doc_count
