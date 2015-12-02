@@ -1,6 +1,20 @@
 1.  Query
   __elasticsearch__.client.search(index: index_name, body: query)
+  __elasticsearch__.search(queries)
+  queries={query:'query', sort:'sort'}
+  
+  def es_search(queries, options = {})
+    return [] unless queries
+    queries[:sort] = options[:sort] if options[:sort]
+    return __elasticsearch__.search(queries).per(MAX) if options[:all]
+    __elasticsearch__.search(queries)
+  end
 
+  def es_search_with_pagination(queries, page_number, options = {})
+    return es_search(queries, options) if options[:all]
+    es_search(queries, options).page(page_number)
+  end
+  
 2. Count
   es_query=__elasticsearch__.client.search(index: index_name, body: query, search_type: :count)
   es_query.try(:[], 'count') || 0
